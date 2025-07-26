@@ -30,7 +30,7 @@ const slides = [
     img: '/images/people2.png',
     text: (
       <>
-        Với tinh thần "Làm việc bằng cái tâm của mình - Không chỉ bán sản phẩm, phải bán cho khách hàng NIỀM TIN",
+        Với tinh thần &quot;Làm việc bằng cái tâm của mình - Không chỉ bán sản phẩm, phải bán cho khách hàng NIỀM TIN&quot;,
         đội ngũ nhân viên XHOME cam kết đem tới những sản phẩm cao cấp, chất lượng để kiến tạo cuộc sống đẳng cấp cho khách hàng.
       </>
     ),
