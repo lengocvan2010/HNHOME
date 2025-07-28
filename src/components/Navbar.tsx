@@ -56,9 +56,15 @@ export default function Navbar() {
                   productOpen ? 'max-h-40 mt-2' : 'max-h-0'
                 } ml-4 space-y-2 text-sm text-black`}
               >
-                <Link href="/product1" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500">Sản phẩm 1</Link>
-                <Link href="/product2" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500">Sản phẩm 2</Link>
-                <Link href="/product3" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500">Sản phẩm 3</Link>
+                <Link href="/product?type=nha-pho" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500">
+                  Nhà phố
+                </Link>
+                <Link href="/product?type=nha-vuon" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500">
+                  Nhà vườn
+                </Link>
+                <Link href="/product?type=chung-cu" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500">
+                  Chung cư
+                </Link>
               </div>
             </div>
 
@@ -94,10 +100,16 @@ export default function Navbar() {
             <Link href="/" className="hover:text-yellow-500">TRANG CHỦ</Link>
             <div className="relative group">
               <Link href="/about" className="hover:text-yellow-500">SẢN PHẨM</Link>
-              <div className="absolute left-0 top-full hidden group-hover:block bg-transparent text-white rounded shadow-md z-50 min-w-[180px] p-2">
-                <Link href="/product1" className="block px-4 py-2 hover:text-yellow-500">Sản phẩm 1</Link>
-                <Link href="/product2" className="block px-4 py-2 hover:text-yellow-500">Sản phẩm 2</Link>
-                <Link href="/product3" className="block px-4 py-2 hover:text-yellow-500">Sản phẩm 3</Link>
+              <div className="absolute left-0 top-full hidden group-hover:block bg-transparent text-white rounded shadow-md z-50 min-w-[180px] p-2 ">
+                <Link href="/product?type=nha-pho" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500 py-2">
+                  Nhà phố
+                </Link>
+                <Link href="/product?type=nha-vuon" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500 py-2">
+                  Nhà vườn
+                </Link>
+                <Link href="/product?type=chung-cu" onClick={() => setMenuOpen(false)} className="block hover:text-yellow-500 py-2">
+                  Chung cư
+                </Link>
               </div>
             </div>
             <Link href="/services" className="hover:text-yellow-500">HỆ THỐNG HNHOME</Link>
