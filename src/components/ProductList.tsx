@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import clsx from 'clsx'
-
+import Link from "next/link";
 const ProductList = ({ type }: { type: string }) => {
   const products = Array.from({ length: 31 }, (_, index) => ({
     id: index + 1,
@@ -39,7 +39,6 @@ const ProductList = ({ type }: { type: string }) => {
           Những BST <span className="italic font-medium">thiết kế nội thất chung cư</span> đến từ các designer và kiến trúc sư dày dặn kinh nghiệm khiến bạn muốn thay đổi ngay không gian căn hộ đã quá phổ thông của mình.
         </p>
       </div>
-
       {/* Grid sản phẩm có hiệu ứng chuyển trang */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -52,24 +51,26 @@ const ProductList = ({ type }: { type: string }) => {
           style={{ minHeight: '670px' }}
         >
           {paginatedProducts.map(product => (
-            <div
-              key={product.id}
-              className="bg-white p-0 text-center w-[260px] h-[200px] flex flex-col items-center"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-[260px] h-[200px] object-cover transition-all duration-300"
-                style={{ borderRadius: '0 65px 0 65px' }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLImageElement).style.borderRadius = '8px'
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLImageElement).style.borderRadius = '0 65px 0 65px'
-                }}
-              />
-              <h3 className="mt-2 text-sm">{product.name}</h3>
-            </div>
+            <Link href="/productDetail" key={product.id}>
+              <div
+                
+                className="bg-white p-0 text-center w-[260px] h-[200px] flex flex-col items-center cursor-pointer"
+              >
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-[260px] h-[200px] object-cover transition-all duration-300"
+                  style={{ borderRadius: '0 65px 0 65px' }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLImageElement).style.borderRadius = '8px'
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLImageElement).style.borderRadius = '0 65px 0 65px'
+                  }}
+                />
+                <h3 className="mt-2 text-sm">{product.name}</h3>
+              </div>
+            </Link>
           ))}
 
           {/* Khối rỗng để giữ layout 3x3 */}

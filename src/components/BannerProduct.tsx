@@ -8,7 +8,7 @@ type BannerProps = {
 
 export default function Banner({ src, title, description }: BannerProps) {
   return (
-    <div className="relative w-full h-[800px]">
+    <div className="relative w-full h-[300px] md:h-[800px]">
       {/* Ảnh nền */}
       <img
         src={src}

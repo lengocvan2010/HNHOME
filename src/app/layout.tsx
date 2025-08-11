@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
 
         {/* Footer luôn nằm sát đáy */}
-        <footer className="text-center text-sm text-gray-500 border-t">
+        <footer className="text-center text-sm text-gray-500">
           <Footer />
         </footer>
       </body>

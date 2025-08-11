@@ -9,7 +9,7 @@ import XHomeSystem from "@/components/XHomeSystem"
 export default function Home() {
   return (
     <div>
-      <Navbar /> {/* ✅ Navbar nằm phía trên carousel */}
+      <Navbar activeMenu="home"/> {/* ✅ Navbar nằm phía trên carousel */}
       <ImageCarousel />
       <AboutUsSection />
       <People/>
